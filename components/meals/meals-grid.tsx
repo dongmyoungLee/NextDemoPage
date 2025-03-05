@@ -4,7 +4,7 @@ import {MealsGridProps} from "@/interfaces/interfaces";
 
 export default function MealsGrid({ meals } : MealsGridProps) {
     return (
-        <ul children={classes.meals}>
+        <ul className={classes.meals}>
             {meals.map(meal => <li key={meal.id + ' MealsGrid'}>
                 <MealItem {...meal} />
             </li>)}

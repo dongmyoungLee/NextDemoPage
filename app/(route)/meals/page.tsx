@@ -5,6 +5,10 @@ import {getMeals} from "@/lib/meals";
 import {Meal} from "@/interfaces/interfaces";
 import {JSX, Suspense} from "react";
 
+export const metadata = {
+    title: 'All Meals',
+    description: 'Browse the de!!',
+};
 async function Meals(): Promise<JSX.Element> {
     const meals : Meal[] = await getMeals();
 
