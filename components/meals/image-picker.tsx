@@ -3,13 +3,13 @@
 import classes from './image-picker.module.css';
 import React, {useRef, useState} from "react";
 import Image from "next/image";
+import slugify from "slugify";
 export default function ImagePicker({label, name}) {
     const [pickedImage, setPickedImage] = useState<string | ArrayBuffer | null>(null);
 
     const imageInputRef = useRef<HTMLInputElement | null>(null);
 
     function handleImageChange(e) {
-
         const file = e.target.files[0];
 
         if (!file) {

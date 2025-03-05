@@ -6,6 +6,7 @@ import {Meal} from "@/interfaces/interfaces";
 
 
 export default function MealItem({ title, slug, image, summary, creator } : Meal) {
+    console.log(image)
     return (
         <article className={classes.meal}>
             <header>
